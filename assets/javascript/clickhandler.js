@@ -14,6 +14,10 @@ blueButton.addEventListener("click", function () {
 * Add the JS for the pink button
 *
 */
+const pinkButton = document.querySelector('#pink-button');
+pinkButton.addEventListener('click',function(){
+    colorBox.className = 'pink';
+} )
 let count = 0;
 const countspan = document.querySelector("#countspan");
 const counterButton = document.querySelector("#counter-button");
@@ -25,6 +29,8 @@ counterButton.addEventListener("click", function () {
     * then updates the inner text of "countspan"
     * to show the current value of "count".
     */
+   count += 1;
+   countspan.innerHTML = count;
 })
 const evenOrOddButton = document.querySelector("#even-or-odd-button");
 evenOrOddButton.addEventListener("click", function () {
@@ -34,4 +40,10 @@ evenOrOddButton.addEventListener("click", function () {
     * alert dialog stating whether the count variable
     * (from part 2, above) is even or odd.
     */
+   if (count % 2 === 1){
+       window.alert("Thats rather odd isn't it?")
+   }
+   if (count % 2 === 0){
+       window.alert('Thats Even worse huh?')
+   }
 })
