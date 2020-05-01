@@ -43,7 +43,7 @@ evenOrOddButton.addEventListener("click", function () {
    if (count % 2 === 1){
        window.alert("Thats rather odd isn't it?")
    }
-   if (count % 2 === 0){
+   else{
        window.alert('Thats Even worse huh?')
    }
 })
